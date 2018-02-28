@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Customer extends Model
 {
     protected $fillable = [
-      'description', 'unit_price'
+      'firstname', 'lastname', 'email', 'address'
     ];
 
     protected $appends = ['text'];
@@ -15,6 +15,6 @@ class Product extends Model
 
     public function getTextAttribute()
     {
-        return $this->attributes['item_code'].' - '.$this->attributes['description'];
+        return $this->attributes['firstname']. ' - '.$this->attributes['lastname'];
     }
 }
