@@ -24,6 +24,8 @@ class CreateInvoicesTable extends Migration
             $table->double('sub_total');
             $table->timestamps();
         });
+
+
     }
 
     /**
